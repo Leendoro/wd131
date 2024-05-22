@@ -60,3 +60,17 @@ function closeViewer() {
 // Add event listener to the gallery section
 const gallerySection = document.querySelector('.gallery');
 gallerySection.addEventListener('click', viewHandler);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the menu button
+    const menuButton = document.querySelector('.menu-button');
+
+    // Get the menu items
+    const menuItems = document.querySelector('nav ul');
+
+    // Add event listener to the menu button
+    menuButton.addEventListener('click', () => {
+        // Toggle the 'hide' class on menu items
+        menuItems.classList.toggle('hide');
+    });
+});
