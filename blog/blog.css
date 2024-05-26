@@ -1,0 +1,91 @@
+/* General styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #473144;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+    color: #AF1B3F;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #EFC69B;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #473144;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    padding-bottom: 0.5em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2em;
+    padding: 2em;
+}
+
+.articles {
+    display: grid;
+    gap: 2em;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+    border-bottom: 1px solid #EFC69B;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+article header {
+    grid-column: span 2;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+aside {
+    padding: 1em;
+    background-color: #EFC69B;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #473144;
+    color: white;
+    padding: 1em 0;
+}
+
+/* Accessibility enhancements */
+article header time {
+    font-weight: bold;
+}
