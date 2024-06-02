@@ -1,4 +1,4 @@
-/* General styles */
+/* New time CSS for article styling */
 body {
     font-family: Helvetica, Arial, sans-serif;
     color: #473144;
@@ -47,6 +47,8 @@ main {
     grid-template-columns: 3fr 1fr;
     gap: 2em;
     padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .articles {
@@ -63,14 +65,36 @@ article {
     margin-bottom: 1em;
 }
 
-article header {
-    grid-column: span 2;
+article .details {
+    text-align: right;
+    border-right: 1px solid #EFC69B;
+    padding-right: 1em;
+    margin-right: 1em;
+}
+
+article .details p {
+    margin: 0.5em 0;
+}
+
+article .details time {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+article .content {
+    text-align: left;
+}
+
+article .content h2 {
+    margin-top: 0;
 }
 
 article img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    display: block;
+    margin: 0 auto;
 }
 
 aside {
@@ -85,7 +109,11 @@ footer {
     padding: 1em 0;
 }
 
-/* Accessibility enhancements */
-article header time {
+form {
+    display: grid;
+    gap: 1em;
+}
+
+label {
     font-weight: bold;
 }
