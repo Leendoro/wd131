@@ -9,9 +9,6 @@
     --secondary-font: "Amatic SC";
 }
 
-/* img {
-    
-} */
 body {
     font-family: var(--primary-font);
     color: var(--text-dark);
