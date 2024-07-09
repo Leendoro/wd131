@@ -1,48 +1,73 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 20px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-}
-div {
-    max-width: 600px;
-    margin: 50px auto;
-    border: solid grey;
-    border-width: 1px;
-    padding: 20px 200px 30px 200px;
-}
-header {
-    text-align: center;
-    border-bottom: solid rgb(191, 191, 191) 1px;
-}
-#ms {
-    font-size: 52px;
-    letter-spacing: 3px;
-    margin-bottom: -5px;
-}
-#byui {
-    color: #006EB6;
-    letter-spacing: 3px;
-    margin-bottom: 1px;
-}
-main {
-    line-height: 1.5;
-}
-.invisible {
-    visibility: hidden;
-}
-footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
-} 
-img {
-    width: 150px;
-    padding-left: 225px;
+    height: 100vh;
+    background-color: #f5f5f5;
 }
 
-/* Dark mode styles */
-.dark body{
-    background-color: #333;
-    color: #f9f9f9;
+.content {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #3a89cd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
-.dark #byui {
-    color: rgb(127, 213, 242);
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h1, .title h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title h2 {
+    color: #006EB6;
+}
+
+main {
+    text-align: left;
+}
+
+main p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.does-list {
+    margin-left: 20px;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto 0;
+    width: 150px;
+    height: auto;
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .title h2 {
+    color: #87CEFA; /* Choose a light blue color with good contrast */
+}
+
+body.dark .content {
+    border-color: #0a0606;
+}
+
+body.dark .logo {
+    filter: invert(100%);
 }
