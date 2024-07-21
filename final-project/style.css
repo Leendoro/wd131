@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FBDCE2;
+}
+
+header {
+    background: #FF9FB2;
+    color: #0ACDFF;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #d87992;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+#modern-sodas {
+    padding: 2rem;
+    background-color: #60AB9A;
+}
