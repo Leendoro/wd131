@@ -1,9 +1,9 @@
-// main.js
-
 // Function to modify DOM elements
 function updateIntroText() {
     const intro = document.getElementById('intro');
-    intro.innerHTML += '<p>Soft drinks have evolved tremendously since their inception...</p>';
+    if (intro) {
+        intro.innerHTML += '<p>Soft drinks have evolved tremendously since their inception...</p>';
+    }
 }
 
 // Function to handle navigation click events
@@ -37,15 +37,10 @@ console.log(`The famous ${sodaInfo.name} was created in ${sodaInfo.year} in the 
 // Use of array methods
 const sodas = ['Coca-Cola', 'Pepsi', 'Sprite', 'Fanta'];
 const sodaList = sodas.map(soda => `<li>${soda}</li>`).join('');
-document.getElementById('history').innerHTML += `<ul>${sodaList}</ul>`;
-
-// Initialize functions
-updateIntroText();
-setupNavigation();
-checkScreenWidth();
-
-
-
+const historySection = document.getElementById('history');
+if (historySection) {
+    historySection.innerHTML += `<ul>${sodaList}</ul>`;
+}
 
 // Function to add modern sodas content dynamically
 function addModernSodasContent() {
@@ -64,12 +59,13 @@ function addModernSodasContent() {
     }
 }
 
+// Initialize functions
+if (document.getElementById('intro')) updateIntroText();
+setupNavigation();
+checkScreenWidth();
+window.addEventListener('resize', checkScreenWidth);
+
 // Check if on modern sodas page and add content
 if (window.location.pathname.includes('modern.html')) {
     addModernSodasContent();
 }
-
-// Reusing previous functions for consistency
-updateIntroText();
-setupNavigation();
-checkScreenWidth();
